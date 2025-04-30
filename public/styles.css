@@ -9,7 +9,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #0da369;
+    background-color: #373434;
 }
 
 #intro-screen {
@@ -39,7 +39,7 @@ h2, h1, p {
 }
 
 button {
-    background-color: rgb(201, 0, 0);
+    background-color: black;
     color: white;
     margin-left: 20px; /* Sama sisennys kuin monsterin kuvilla */
     align-self: flex-start; /* Asetetaan nappula vasempaan reunaan */
@@ -52,16 +52,54 @@ button {
 #game-screen {
     display: none;
 }
+
 #game-board {
     display: grid;
     gap: 0px;
     background-image: url('images/backround.png');
     background-size: cover;
     background-position: center;
-    width: 50vw;
-    height: 50vw;
+    width: fit-content; 
+    height: fit-content; 
     margin: 10px auto;
     border: 2px solid #333;
     padding: 0px;
     background-color: rgba(221, 221, 221, 0.8);
     }
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wall {
+    background-image: url('images/wall.png');
+    background-size: cover;
+}
+
+.player{
+    background-image: url('images/player.png');
+    background-size: cover;
+}
+.hornmonster{
+    background-image: url('images/hornmonster.png');
+    background-size: cover;
+}
+
+
+.bullet{
+    border-radius: 50%;
+    background-color: red;
+    animation: fadeOut 0.5s ease-out;
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
