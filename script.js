@@ -3,7 +3,7 @@ let board; //kenttä tallentaan tähän
 const cellSize = calculateCellSize();
 let player;
 let ghosts = [];
-let ghostSpeed = 500;
+let ghostSpeed = 1000;
 let isGameRunning = false;
 let ghostInterval;
 
